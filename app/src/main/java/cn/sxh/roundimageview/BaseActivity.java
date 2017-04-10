@@ -3,6 +3,8 @@ package cn.sxh.roundimageview;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Adapter;
 
 /**
  * @auther snowTiger
@@ -10,7 +12,7 @@ import android.support.v7.app.AppCompatActivity;
  * @time 2017/4/10 15:35
  */
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +20,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getContentViewID());
         initUI();
         initData();
-
     }
 
     protected abstract int getContentViewID();
